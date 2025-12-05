@@ -11,6 +11,7 @@ import {
   SectionBox,
 } from '@kinvolk/headlamp-plugin/lib/components/common';
 import { DetailsViewSectionProps } from '@kinvolk/headlamp-plugin/lib/components/DetailsViewSection/DetailsViewSection';
+import K8s from '@kinvolk/headlamp-plugin/lib/K8s';
 import { Box, Typography } from '@mui/material';
 import { useState } from 'react';
 import { IGNotFound } from './common/NotFound';
@@ -58,12 +59,12 @@ registerDetailsViewSection(({ resource }: DetailsViewSectionProps) => {
 
   const isIGInstalled = pods?.find((pod: any) => isIGPod(pod));
 
-  if (pods == null) {
+  if (pods === null) {
     return null;
   }
 
   if (!isIGInstalled) {
-    <IGNotFound />;
+    return <IGNotFound />;
   }
   if (resource && pods && isIGInstalled) {
     return (
