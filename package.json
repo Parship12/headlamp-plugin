@@ -11,7 +11,9 @@
     "tsc": "headlamp-plugin tsc",
     "storybook": "headlamp-plugin storybook",
     "package": "headlamp-plugin package",
-    "test": "headlamp-plugin test",
+    "test": "vitest run -c node_modules/@kinvolk/headlamp-plugin/config/vite.config.mjs",
+    "test:watch": "headlamp-plugin test",
+    "test:coverage": "vitest run -c node_modules/@kinvolk/headlamp-plugin/config/vite.config.mjs --coverage --coverage.provider=istanbul",
     "storybook-build": "headlamp-plugin storybook-build"
   },
   "keywords": [
