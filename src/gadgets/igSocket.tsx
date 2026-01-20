@@ -182,7 +182,7 @@ const usePortForward = (url: string | null): PortForwardState => {
           clearTimeout(timeoutId);
           resolve(socket);
         } else if (mountedRef.current) {
-          setTimeout(checkSocket, 100);
+          setTimeout(checkSocket, 10);
         } else {
           clearTimeout(timeoutId);
           reject(new Error('Component unmounted while waiting for socket'));
