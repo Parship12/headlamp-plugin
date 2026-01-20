@@ -1,6 +1,6 @@
 {
   "name": "inspektor-gadget",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "description": "An easy way to run gadgets from the Inspektor Gadget project and configure views for them.",
   "scripts": {
     "start": "headlamp-plugin start",
